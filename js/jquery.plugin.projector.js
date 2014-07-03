@@ -29,7 +29,13 @@
         .wrap("<div class='plane " + ("plane-"+planes.length) + "'></div>")
         .css("border", "0.09em solid red")
         .css("position", "absolute");
-      
+
+      $(plane.el)
+        .css("transform-origin", "0 0")
+        .css("-webkit-transform-origin", "0 0")
+        .css("-moz-transform-origin", "0 0")
+        .css("-o-transform-origin", "0 0");
+
       var $wrap = $(".plane.plane-"+planes.length);
 
       console.log($wrap)
@@ -62,10 +68,13 @@
   function Plane (el, corners) {
     this.corners = corners;
     this.el = el;
-    this.marker0 = $("<div class='marker marker0'></div>");
-    this.marker2 = $("<div class='marker marker2'></div>");
-    this.marker4 = $("<div class='marker marker4'></div>");
-    this.marker6 = $("<div class='marker marker6'></div>");
+    var markerStyle="width:20px;margin-left:-10px;height:20px;margin-top:-10px;"
+      + "display:block; position:absolute;background:#c3c3c3;border-radius: 10px;"
+      + "border: 1px solid #333333;opacity: 0.5;cursor: cell;";
+    this.marker0 = $("<div class='marker marker0' style='"+markerStyle+"'></div>");
+    this.marker2 = $("<div class='marker marker2' style='"+markerStyle+"'></div>");
+    this.marker4 = $("<div class='marker marker4' style='"+markerStyle+"'></div>");
+    this.marker6 = $("<div class='marker marker6' style='"+markerStyle+"'></div>");
   }  
 
   
