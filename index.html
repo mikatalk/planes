@@ -6,6 +6,7 @@
     <title>Projected Planes</title>
 	<link rel="icon" type="image/png" href="img/logo-icon-planes.png">
     <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+	<script src="js/Voronoi.js"></script>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/jquery.plugin.projector.js"></script>
 	</head>
@@ -19,6 +20,9 @@
 
 		$(function() {			
 			$(".projector").project();
+
+			Voronoi.init(document.getElementsByTagName('canvas')[0], 1000, 1000);
+			Voronoi.start();
 		});
 
 		</script>
