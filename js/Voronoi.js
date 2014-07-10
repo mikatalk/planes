@@ -1,4 +1,5 @@
 
+/** http://neave.com/ **/
 var Voronoi = Voronoi || {};
 
 (function(Voronoi) {
