@@ -102,6 +102,7 @@
     var $target = $(evnt.target).parent(".plane");
     currentPlane = $target.data("plane" ) - 1;
     if ( currentPlane == undefined ) return;
+    if ( typeof planes[currentPlane] === 'undefined' ) return;
     if ( currentPlane < 0 ) return;
     // bring child over top
     $('body').append($(planes[currentPlane].el).parent());
