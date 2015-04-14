@@ -38,13 +38,10 @@
 
       var $wrap = $(".plane.plane-"+planes.length);
 
-      console.log($wrap)
-
-      // var parent = $(plane.el).parent();
-      $wrap.prepend(plane.marker0);
-      $wrap.prepend(plane.marker2);
-      $wrap.prepend(plane.marker4);
-      $wrap.prepend(plane.marker6);
+      $wrap.append(plane.marker0);
+      $wrap.append(plane.marker2);
+      $wrap.append(plane.marker4);
+      $wrap.append(plane.marker6);
 
       $wrap.data("plane", planes.length)//.addClass("plane-"+planes.length);
 
